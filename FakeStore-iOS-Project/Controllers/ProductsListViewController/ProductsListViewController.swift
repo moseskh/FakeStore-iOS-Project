@@ -13,10 +13,12 @@ class ProductsListViewController: UIViewController {
     
     var products: [Product]?
     private let cacheKey = "cachedProductsList"
+    private var isConnected: Bool = true
     
     // MARK: - UI Elements
     
     let productsListCollectionView: UICollectionView = ProductsListCollectionView()
+    let networkStatusView: NetworkStatusView = NetworkStatusView()
     
     // MARK: - Lifecycle Methods
     
@@ -26,6 +28,11 @@ class ProductsListViewController: UIViewController {
         setupRefreshControl()
         fetchProducts()
         setupLayout()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        monitorNetworkStatus()
     }
     
     // MARK: - View Configuration
@@ -100,6 +107,26 @@ class ProductsListViewController: UIViewController {
                     }
                 }
             }
+        }
+    }
+    
+    // MARK: - Network Monitoring
+    
+    private func monitorNetworkStatus() {
+        NetworkManager.shared.onStatusChange = { [weak self] isConnected in
+            DispatchQueue.main.async {
+                self?.handleNetworkStatusChange(isConnected: isConnected)
+            }
+        }
+    }
+    
+    private func handleNetworkStatusChange(isConnected: Bool) {
+        if isConnected != self.isConnected {
+            self.isConnected = isConnected
+            networkStatusView.updateStatus(isConnected: isConnected)
+            networkStatusView.show(in: view)
+        } else if networkStatusView.superview != nil {
+            networkStatusView.updateStatus(isConnected: isConnected)
         }
     }
 }

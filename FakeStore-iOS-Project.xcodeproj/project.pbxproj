@@ -43,6 +43,8 @@
 		A61EE89A2C1E09A100FB1E6D /* LoadingIndicatorPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A61EE8992C1E09A100FB1E6D /* LoadingIndicatorPresenter.swift */; };
 		A61EE89C2C1E0ABA00FB1E6D /* ProductTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A61EE89B2C1E0ABA00FB1E6D /* ProductTableView.swift */; };
 		A61EE89E2C1E0DEE00FB1E6D /* ProductTableViewControllerDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A61EE89D2C1E0DEE00FB1E6D /* ProductTableViewControllerDelegate.swift */; };
+		A686D28C2C1F3CFF00F1DC52 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A686D28B2C1F3CFF00F1DC52 /* NetworkManager.swift */; };
+		A686D28F2C1F3D2B00F1DC52 /* NetworkStatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A686D28E2C1F3D2B00F1DC52 /* NetworkStatusView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -81,6 +83,8 @@
 		A61EE8992C1E09A100FB1E6D /* LoadingIndicatorPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingIndicatorPresenter.swift; sourceTree = "<group>"; };
 		A61EE89B2C1E0ABA00FB1E6D /* ProductTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTableView.swift; sourceTree = "<group>"; };
 		A61EE89D2C1E0DEE00FB1E6D /* ProductTableViewControllerDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductTableViewControllerDelegate.swift; sourceTree = "<group>"; };
+		A686D28B2C1F3CFF00F1DC52 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		A686D28E2C1F3D2B00F1DC52 /* NetworkStatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkStatusView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,6 +192,7 @@
 			children = (
 				A61EE8562C19FAA000FB1E6D /* ProductController */,
 				A61EE8592C19FAA000FB1E6D /* ProductsList */,
+				A686D28D2C1F3D1C00F1DC52 /* Others */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -197,6 +202,7 @@
 			children = (
 				A61EE8642C19FAA700FB1E6D /* APICaller.swift */,
 				A61EE8652C19FAA700FB1E6D /* CachingManager.swift */,
+				A686D28B2C1F3CFF00F1DC52 /* NetworkManager.swift */,
 			);
 			path = Managers;
 			sourceTree = "<group>";
@@ -256,6 +262,14 @@
 				A61EE8972C1B573400FB1E6D /* AlertPresenter.swift */,
 			);
 			path = Presenters;
+			sourceTree = "<group>";
+		};
+		A686D28D2C1F3D1C00F1DC52 /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				A686D28E2C1F3D2B00F1DC52 /* NetworkStatusView.swift */,
+			);
+			path = Others;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -354,6 +368,7 @@
 				A61EE8902C1B39B500FB1E6D /* ProductTableViewControllerDataSource.swift in Sources */,
 				A61EE8852C1A04B000FB1E6D /* ProductRatingTableViewCell.swift in Sources */,
 				A61EE8832C19FEE100FB1E6D /* ProductTitleTableViewCell.swift in Sources */,
+				A686D28C2C1F3CFF00F1DC52 /* NetworkManager.swift in Sources */,
 				A61EE8632C19FAA000FB1E6D /* ProductTableSectionHeaderView.swift in Sources */,
 				A61EE8982C1B573400FB1E6D /* AlertPresenter.swift in Sources */,
 				A61EE85D2C19FAA000FB1E6D /* ProductTableViewHeader.swift in Sources */,
@@ -366,6 +381,7 @@
 				A61EE84B2C19FA8900FB1E6D /* ProductsListViewController.swift in Sources */,
 				A61EE8612C19FAA000FB1E6D /* ProductsListCollectionView.swift in Sources */,
 				A61EE89C2C1E0ABA00FB1E6D /* ProductTableView.swift in Sources */,
+				A686D28F2C1F3D2B00F1DC52 /* NetworkStatusView.swift in Sources */,
 				A61EE89A2C1E09A100FB1E6D /* LoadingIndicatorPresenter.swift in Sources */,
 				A61EE8962C1B3CF400FB1E6D /* ProductsListCollectionViewDataSource.swift in Sources */,
 			);

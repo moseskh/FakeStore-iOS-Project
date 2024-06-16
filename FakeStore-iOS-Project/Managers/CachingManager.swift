@@ -9,8 +9,9 @@ import Foundation
 
 class CachingManager {
     
-    private let cache = NSCache<NSString, AnyObject>()
     static let shared = CachingManager()
+    private let cache = NSCache<NSString, AnyObject>()
+
     
     private init() {}
     

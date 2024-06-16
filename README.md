@@ -21,7 +21,7 @@ Upon selecting a product, the application transitions to a detailed view control
 
 ### Error Handling
 
-The app handles potential error cases, such as network failures, and provides appropriate feedback to the user using alert controllers and retry mechanisms.
+The app handles potential error cases, such as network failures, and provides appropriate feedback to the user using alert controllers and retry mechanisms. Additionally, the application includes a network status checker that monitors connectivity and informs the user of the current network status through a visual indicator.
 
 ### Caching Mechanism
 
@@ -41,7 +41,7 @@ Each view controller incorporates a refresh controller that allows users to manu
 - **Models**: Contains the data models used in the app.
 - **Views**: Contains the UI components, including custom collection view cells and table view cells.
 - **ViewControllers**: Contains the view controllers for the main product list and product detail screens.
-- **Managers**: Contains the API Caller and Caching Manager.
+- **Managers**: Contains the API Caller, Caching Manager and Network Manager.
 - **Presenters**: Contains the Loading Indicator Presenter and Alert Presenter.
 
 ## Acknowledgements
